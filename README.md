@@ -33,14 +33,24 @@ update as THEZoo.csv to work. Added primitive code so entering "no" at
 beginning will exit program. Added OR_search and AND_search function. With 
 those added ability to chose QUICK, OR, AND search modes. OR_search() prints 
 rows that have either/or values. Its a pain because all course values are 
-either Yes or No. AND_search() :
+either Yes or No. The intended result is for it to take 2 "column","value" sets and print all rows that contain
+either/or values under their specified column. The values only way like it is currently could work but (**see side note at bottom of file**) The AND_search() :
 
 When only entering 2 entries---- takes them 
 as "column", "value", in that order and searches. In that respect it works 
-fine but not intended result. Crashes if first entry is also a "value".
+fine but not intended result. Crashes if first entry is also a "value". This is pretty much what Quick Search does so wouldn't
+be using AND_search() if 2 entries would have been user intention.
 
 When 2x sets of "column","value" entries------ only searches the last set 
 entered and ignores the first. Prints correct rows in that respect but not 
-intended result. Crashes if first entry of a set is also a "value"
+intended result. Crashes if first entry of a set is also a "value". Intended result is for it to search for ALL "column","value"
+set together. Not just the last entered set.
+
+**Side Note**: Most values are "Yes" or "No" (but not all) in .cvs file. Therefore the war OR_search() is now you can't tell what
+column you are dealing with by the value alone. Don't know if I can get around renaming all values with code or if I have a lot of edditing ahead of me.
+
+
+
+
 
 
