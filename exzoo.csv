@@ -1,0 +1,5 @@
+Index,Employee ID,Seniority,Last_name,Initials,Position,Group,Safetry trg,Driver trg,Microsoft trg,JAVA trg,Python trg
+1,1234,Inter,Smith,MLL,senior dev,new build,Yes,Yes,Yes,Yes,Yes
+2,5678,New,John,VA,junior dev,new build,Yes,Yes,Yes,No,Yes
+3,9854,New,Green,KS,junior dev,updates,Yes,No,Yes,Yes,No
+4,5432,Inter,Doe,JC,junior dev,updates,No,Yes,No,No,No
