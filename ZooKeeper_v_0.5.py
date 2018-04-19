@@ -5,7 +5,7 @@ import numpy as np
 
 #Reads csv data file
 
-df = pd.read_csv("TheZoo.csv", sep = ",")
+df = pd.read_csv("exzoo.csv", sep = ",")
 
 #Define AND search func
 
