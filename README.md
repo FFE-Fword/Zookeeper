@@ -52,8 +52,12 @@ entered and ignores the first. Prints correct rows in that respect but not
 intended result. Crashes if first entry of a set is also a "value". Intended result is for it to search for ALL "column","value"
 set together. Not just the last entered set.
 
-**Side Note**: Most values are "Yes" or "No" (but not all) in .cvs file. Therefore the war OR_search() is now you can't tell what
-column you are dealing with by the value alone. Don't know if I can get around renaming all values with code or if I have a lot of edditing ahead of me.
+-ver_ 0.9 21/4/2018
+
+Updated AND_search() and OR_search() functions. Made them shorter and working 
+as intended. AND_search only let's you search for 2 categories. Not unlimited,
+but will fix on later update.
+
 
 
 
