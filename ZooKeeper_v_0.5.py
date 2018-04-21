@@ -1,39 +1,32 @@
-#Version 0.5
+#Version 0.9
 
 import pandas as pd
 import numpy as np
 
 #Reads csv data file
 
-df = pd.read_csv("exzoo.csv", sep = ",")
+df = pd.read_csv("TheZoo.csv", sep = ",")
 
 #Define AND search func
 
-def AND_search(df,list_of_keywords):
-    index_arr = np.array([]) 
-    for keyword in list_of_keywords:
-        index = df[df==keyword].dropna(how='all').index.values
-        index_arr = index if index_arr.size == 0 else np.intersect1d(index_arr,index)
-    print(df.loc[index_arr.astype(int)])
-
+def AND_search(df):
+    df = df[ (df[input("Enter 1st Category: ")] == str(input("Enter 1st Value: ")
+        )) & (df[input("Enter 2nd Category: ")] == str(input("Enter 2nd Value: ")))]
+    print(df)
+    
 #Define OR search func
 
-def OR_search(df,list_of_keywords):
-    index_arr = np.array([]) 
-    for keyword in list_of_keywords:
-        index = df[df==keyword].dropna(how='all').index.values
-        index_arr = np.unique(np.concatenate((index_arr,index),0))
-    print(df.loc[indyeex_arr.astype(int)])
-
-#Use or Close the program
+def OR_search(df):
+     df = df[ (df[input("Enter 1st Category: ")] == str(input("Enter 1st Value: ")
+        )) | (df[input("Enter 2nd Category: ")] == str(input("Enter 2nd Value: ")))]
+     print(df)
     
+
+#Start Program
 while True:
     start = input("Do you want to look in the Zoo? (Enter 'yes' or 'no'.) :")
     if start == "yes":
         
-   
-
-
 #Type of search
         
         filt = input("Quick Search , AND Search , OR Search: ")
@@ -52,26 +45,12 @@ while True:
 #AND_search code. Prints according to current vers notes
 
         elif filt.lower() == "and search":
-                keylist = []
-                i = 0
-                while 1:
-                    i +=1
-                    key = input("Enter value or enter s to start search %d: "%i)
-                    if key == "s":
-                        break
-                    keylist.append(key)
-                AND_search(df,keylist)
+                AND_search(df)
                 
 #OR_search code. Prints according to vers notes.
                 
         elif filt.lower() == "or search":
-                keylist = []
-                i = 0
-                while i < 2:
-                    i += 1
-                    key = input("Enter value %d: "%i)
-                    keylist.append(key)
-                OR_search(df,keylist)
+                OR_search(df)
                 
 #Closes Program if user entered no at start
                 
@@ -80,6 +59,4 @@ while True:
             print("Closing the Gate!")
             break
             
-                                 
-                
 
